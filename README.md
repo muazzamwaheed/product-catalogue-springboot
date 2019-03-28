@@ -17,7 +17,7 @@ This will be list of products already added to catalogue.
 This will delete a perticular product from product catalogue.
 
 #### Sample input
-`
+
 [
 	
 	{
@@ -26,4 +26,3 @@ This will delete a perticular product from product catalogue.
 		"price":"10000"
 	}
 ]
-`
