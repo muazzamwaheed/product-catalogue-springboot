@@ -18,11 +18,13 @@ This will delete a perticular product from product catalogue.
 
 #### Sample input
 
-[
-	
-	{
+	[{
 		"name":"Mercedes",
 		"type":"CAR",
 		"price":"10000"
-	}
-]
+	}]
+
+### API definition can be found in 
+	/resources/swagger.yaml
+Open .yaml file in https://editor.swagger.io/ , to see the API definition in editor
+
