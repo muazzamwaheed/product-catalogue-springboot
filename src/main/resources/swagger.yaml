@@ -6,7 +6,7 @@ info:
   version: "1.0.0"
   title: "Product Catalogue Service API"
 host: "localhost"
-basePath: "http://localhost:9090"
+basePath: "http:\//localhost:9090"
 schemes:
 - "http"
 consumes:
