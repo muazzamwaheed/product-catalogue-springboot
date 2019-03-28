@@ -1,4 +1,4 @@
-# SpringBootSample
+# ProductCatalogSample
 This repository contains project related to spring boot for learning purpose
 
 ### About Project
