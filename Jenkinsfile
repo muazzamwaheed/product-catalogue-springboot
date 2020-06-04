@@ -8,9 +8,9 @@ pipeline {
             sh "${mvn} clean package install"
         }
 
-        stage('Remove Docker Image'){
-             sh 'docker rm -v product-catalogue:0.0.1'
-        }
+        stage('Remove Container on Dev Server'){
+             sh 'docker rm -v product-catalogue'
+         }
 
         stage('Build Docker Image'){
                 sh 'docker build -t muazzamwaheed/product-catalogue:0.0.1 .'
