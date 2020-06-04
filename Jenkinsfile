@@ -9,6 +9,10 @@ pipeline {
         }
 
         stage('Build Docker Image'){
+             sh 'docker rm -v product-catalogue:0.0.1'
+        }
+
+        stage('Build Docker Image'){
                 sh 'docker build -t muazzamwaheed/product-catalogue:0.0.1 .'
         }
 
