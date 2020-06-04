@@ -23,13 +23,13 @@ public class ProductValidator {
 
     private void checkProductName(Collection<ProductDto> productDto) {
         if (productDto.isEmpty()) {
-            throw new BadRequestException();
+            throw new BadRequestException("The requested URL could not be processed because of bad request");
         }
     }
 
     private void validateProductDto(Collection<ProductDto> productDto) {
         if (productDto.isEmpty()) {
-            throw new BadRequestException();
+            throw new BadRequestException("The requested URL could not be processed because of bad request");
         }
     }
 
@@ -38,10 +38,10 @@ public class ProductValidator {
         String productType = productDto.getType();
 
         if (isNull(productName) || productName.trim().isEmpty()) {
-            throw new BadRequestException();
+            throw new BadRequestException("The requested URL could not be processed because of bad request");
         }
         if (isNull(productType) || productType.trim().isEmpty()) {
-            throw new BadRequestException();
+            throw new BadRequestException("The requested URL could not be processed because of bad request");
         }
     }
 
