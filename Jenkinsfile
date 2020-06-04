@@ -5,10 +5,6 @@ node {
 	   sh "${mvn} clean package install"
    }
 
-   stage('Deploy'){
-   	   sh "${mvn} deploy"
-   }
-
    stage('Build Docker Image'){
         sh 'docker build -t muazzamwaheed/product-catalogue:0.0.1 .'
       }
