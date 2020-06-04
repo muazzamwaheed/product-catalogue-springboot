@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'dockeredge' }
-    stages {
-        def mvn = tool (name: 'Maven3', type: 'maven') + '/bin/mvn'
+    def mvn = tool (name: 'Maven3', type: 'maven') + '/bin/mvn'
+
         stage('Mvn Package'){
             sh "${mvn} clean package install"
         }
@@ -24,6 +24,6 @@ pipeline {
         stage('Run Container on Dev Server'){
            sh 'docker run -p 9090:9090 -d --name product-catalogue muazzamwaheed/product-catalogue:0.0.1'
         }
-    }
+
 
 }
