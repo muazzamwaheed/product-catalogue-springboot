@@ -7,7 +7,7 @@ node {
         }
 
         stage('Remove Container on Dev Server'){
-             sh 'docker rm -v product-catalogue'
+             sh 'docker stop -t 10 product-catalogue'
          }
 
         stage('Build Docker Image'){
@@ -24,6 +24,4 @@ node {
         stage('Run Container on Dev Server'){
            sh 'docker run -p 9090:9090 -d --name product-catalogue muazzamwaheed/product-catalogue:0.0.1'
         }
-
-
 }
