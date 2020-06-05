@@ -8,6 +8,7 @@ node {
 
         stage('Remove Container on Dev Server'){
              sh 'docker stop -t 10 product-catalogue'
+             sh 'docker rm -v product-catalogue'
          }
 
         stage('Build Docker Image'){
