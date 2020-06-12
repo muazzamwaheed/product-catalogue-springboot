@@ -12,17 +12,17 @@ node {
          }
 
         stage('Build Docker Image'){
-                sh 'docker build -t muazzamwaheed/product-catalogue:0.0.1 .'
+                sh 'docker build -t muazzamwaheed/product-catalogue:latest .'
         }
 
         stage('Push Docker Image'){
             withCredentials([string(credentialsId: 'docker-user', variable: 'dockerPassword')]) {
               sh "docker login -u muazzamwaheed -p ${dockerPassword}"
             }
-           sh 'docker push muazzamwaheed/product-catalogue:0.0.1'
+           sh 'docker push muazzamwaheed/product-catalogue:latest'
         }
 
         stage('Run Container on Dev Server'){
-           sh 'docker run -p 9090:9090 -d --name product-catalogue muazzamwaheed/product-catalogue:0.0.1'
+           sh 'docker run -p 9090:9090 -d --name product-catalogue muazzamwaheed/product-catalogue:latest'
         }
 }
